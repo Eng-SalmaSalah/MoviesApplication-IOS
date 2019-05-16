@@ -8,5 +8,5 @@
 
 import Foundation
 protocol HomeDelegate {
-    
+    func setMovieList(movieList:[Movie]) 
 }

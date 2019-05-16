@@ -28,10 +28,11 @@ class HomePresenter {
                 let json = JSON(value)
                 if let result = json["results"].array{
                     for item in result{
-
-                        let movie = Movie(id: item["id"].intValue, video: item["video"].boolValue, title: item["title"].stringValue, posterPath: item["poster_path"].stringValue, originalTitle: item["original_title"].stringValue, overview: item["overview"].stringValue, releaseData: item["release_date"].stringValue)
+                        let movie = Movie(id: item["id"].intValue,title: item["title"].stringValue, posterPath: item["poster_path"].stringValue, originalTitle: item["original_title"].stringValue, overview: item["overview"].stringValue, releaseData: item["release_date"].stringValue)
                         self.moviesList.append(movie)
-                    }}else{
+                    }
+                    self.homeDelegate?.setMovieList(movieList: self.moviesList)
+                }else{
                     print("no movie")
                 }
             }

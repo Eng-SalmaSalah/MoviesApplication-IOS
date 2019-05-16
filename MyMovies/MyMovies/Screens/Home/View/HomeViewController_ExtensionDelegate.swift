@@ -8,9 +8,17 @@
 
 import Foundation
 extension HomeViewController : HomeDelegate{
-    func getJsonResponse() {
-        //code
+    
+    func setMovieList(movieList: [Movie]) {
+        self.movieList=movieList
+        DispatchQueue.main.async {
+            self.movieCollectionViewOutlet.reloadData()
+        }
+        
+        //print(self.movieList)
     }
+    
+    
     
     
 }
