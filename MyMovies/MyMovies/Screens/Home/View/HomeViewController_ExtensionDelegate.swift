@@ -7,3 +7,10 @@
 //
 
 import Foundation
+extension HomeViewController : HomeDelegate{
+    func getJsonResponse() {
+        //code
+    }
+    
+    
+}

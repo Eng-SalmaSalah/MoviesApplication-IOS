@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct Movie {
+    var id :Int
+    var video : Bool
+    var title : String
+    var posterPath : String
+    var originalTitle : String
+    var overview : String
+    var releaseData : String
+}
+
