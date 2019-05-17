@@ -11,6 +11,16 @@ import SDWebImage
 
 class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
+    @IBAction func segmentView(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print("1")
+        case 1:
+            print("2")
+        default:
+            print("3")
+        }
+    }
     
     @IBOutlet weak var movieCollectionViewOutlet: UICollectionView!
     

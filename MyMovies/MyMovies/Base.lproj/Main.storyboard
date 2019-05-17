@@ -72,6 +72,9 @@
                                     <segment title="Highest Rated"/>
                                 </segments>
                                 <color key="tintColor" red="0.94698554277420044" green="0.98465365171432495" blue="0.0042463503777980804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentView:" destination="oYk-ac-h0l" eventType="valueChanged" id="NV4-1B-SuW"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

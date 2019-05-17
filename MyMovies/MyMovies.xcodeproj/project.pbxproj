@@ -15,6 +15,8 @@
 		380931322289E07100BE5695 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380931312289E07100BE5695 /* HomeViewController.swift */; };
 		380931342289E0F900BE5695 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380931332289E0F900BE5695 /* MovieDetailsViewController.swift */; };
 		380931362289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380931352289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift */; };
+		382DD38D228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382DD38C228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift */; };
+		382DD391228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382DD390228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift */; };
 		385813CB2289B63800E06AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385813CA2289B63800E06AAE /* AppDelegate.swift */; };
 		385813D02289B63800E06AAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385813CE2289B63800E06AAE /* Main.storyboard */; };
 		385813D32289B63800E06AAE /* MyMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 385813D12289B63800E06AAE /* MyMovies.xcdatamodeld */; };
@@ -36,6 +38,8 @@
 		380931312289E07100BE5695 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		380931332289E0F900BE5695 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		380931352289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController_ExtensionDelegate.swift; sourceTree = "<group>"; };
+		382DD38C228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRetrievingUsingAlamofire.swift; sourceTree = "<group>"; };
+		382DD390228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRetrievingUsingAlamofireDelegate.swift; sourceTree = "<group>"; };
 		385813C72289B63800E06AAE /* MyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385813CA2289B63800E06AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		385813CF2289B63800E06AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,22 @@
 				EC0051132E487DDCCF63CB50 /* Pods-MyMovies.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		382DD38E228DC38100CC4C82 /* NetworkingProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				382DD390228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift */,
+			);
+			path = NetworkingProtocols;
+			sourceTree = "<group>";
+		};
+		382DD38F228DC38E00CC4C82 /* NetworkingClasses */ = {
+			isa = PBXGroup;
+			children = (
+				382DD38C228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift */,
+			);
+			path = NetworkingClasses;
 			sourceTree = "<group>";
 		};
 		385813BE2289B63700E06AAE = {
@@ -206,6 +226,8 @@
 		385813EC2289B80100E06AAE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				382DD38F228DC38E00CC4C82 /* NetworkingClasses */,
+				382DD38E228DC38100CC4C82 /* NetworkingProtocols */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -352,8 +374,10 @@
 				380931322289E07100BE5695 /* HomeViewController.swift in Sources */,
 				3809312A2289DF7F00BE5695 /* MovieDetailsPresenter.swift in Sources */,
 				380931242289DEA400BE5695 /* HomePresenter.swift in Sources */,
+				382DD38D228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift in Sources */,
 				385813CB2289B63800E06AAE /* AppDelegate.swift in Sources */,
 				389FCB06228DA70E004BCC8C /* HomeCollectionViewCell.swift in Sources */,
+				382DD391228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
