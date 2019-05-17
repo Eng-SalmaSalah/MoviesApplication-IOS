@@ -33,10 +33,11 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
             case .failure(let error):
                 print(error)
             case .success(let value):
+                self.movieList.removeAll()
                 let json = JSON(value)
                 if let result = json["results"].array{
                     for item in result{
-                        let movie = Movie(id: item["id"].intValue,title: item["title"].stringValue, posterPath: item["poster_path"].stringValue, originalTitle: item["original_title"].stringValue, overview: item["overview"].stringValue, releaseData: item["release_date"].stringValue)
+                        let movie = Movie(id: item["id"].intValue, voteAverage: item["vote_average"].floatValue, posterPath: item["poster_path"].stringValue, originalTitle: item["original_title"].stringValue, overview: item["overview"].stringValue, releaseDate: item["release_date"].stringValue)
                         self.movieList.append(movie)
                     }
                     self.sendMoviesToPresenter(movieList: self.movieList)

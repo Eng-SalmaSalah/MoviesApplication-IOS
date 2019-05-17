@@ -10,10 +10,10 @@ import Foundation
 
 struct Movie {
     var id :Int
-    var title : String
+    var voteAverage: Float
     var posterPath : String
     var originalTitle : String
     var overview : String
-    var releaseData : String
+    var releaseDate : String
 }
 
