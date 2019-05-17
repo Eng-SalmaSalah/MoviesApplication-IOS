@@ -16,11 +16,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectio
     @IBAction func segmentView(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            print("1")
+            movieList.removeAll()
+            movieCollectionViewOutlet.reloadData()
+            getMovieList(mostPopular: true)
+
         case 1:
-            print("2")
+            movieList.removeAll()
+            movieCollectionViewOutlet.reloadData()
+            getMovieList(mostPopular: false)
+
         default:
-            print("")
+            getMovieList(mostPopular: true)
+            
         }
     }
     
@@ -33,7 +40,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectio
         movieCollectionViewOutlet.dataSource=self
         // Do any additional setup after loading the view.
         homePresenter.setDelegate(homeDelegate: self)
-        getMovieList(moviesOrder: "mostPopular")
+        getMovieList(mostPopular: true)
         //print (movieList)
     }
     

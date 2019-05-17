@@ -26,8 +26,8 @@ class HomePresenter:HomePresenterDelegate {
     }
     
     
-    func getJsonResponseFromNetwork() {
-        jsonRetrievingUsingAlamofire!.getMovies()
+    func getJsonResponseFromNetwork(mostPopular:Bool) {
+        jsonRetrievingUsingAlamofire!.getMovies(mostPopular: mostPopular)
     }
     
     func sendMoviesToView(movieList: [Movie]) {

@@ -8,6 +8,6 @@
 
 import Foundation
 protocol HomeViewDelegate {
-    func getMovieList(moviesOrder : String)
+    func getMovieList(mostPopular : Bool)
     func showMovies(movieList:[Movie])
 }

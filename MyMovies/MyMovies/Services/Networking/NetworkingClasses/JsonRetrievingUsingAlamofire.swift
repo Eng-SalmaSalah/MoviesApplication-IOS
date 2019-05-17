@@ -19,8 +19,15 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
         self.homePresenter = homePresneter
     }
     
-    func getMovies(){
-        let url = URL(string :"https://api.themoviedb.org/3/discover/movie?sort_by=highest-rated.desc&api_key=b3bc361fb3fda11be0977ea63bbfc10f")
+    func getMovies(mostPopular:Bool){
+        var url : URL?
+        switch mostPopular {
+        case true:
+            url = URL(string :"https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=b3bc361fb3fda11be0977ea63bbfc10f")
+        case false:
+            url = URL(string :"https://api.themoviedb.org/3/discover/movie?sort_by=highest-rated.desc&api_key=b3bc361fb3fda11be0977ea63bbfc10f")
+        }
+        
         Alamofire.request(url!).responseJSON { (response) in
             switch response.result{
             case .failure(let error):

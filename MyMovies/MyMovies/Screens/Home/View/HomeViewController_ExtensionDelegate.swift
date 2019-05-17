@@ -10,8 +10,8 @@ import Foundation
 extension HomeViewController : HomeViewDelegate{
 
     
-    func getMovieList(moviesOrder : String) {
-    homePresenter.getJsonResponseFromNetwork()
+    func getMovieList(mostPopular : Bool) {
+        homePresenter.getJsonResponseFromNetwork(mostPopular:mostPopular)
     
         
     }
@@ -21,9 +21,5 @@ extension HomeViewController : HomeViewDelegate{
             self.movieCollectionViewOutlet.reloadData()
         }
     }
-    
-    
-    
-    
     
 }
