@@ -9,4 +9,5 @@
 import Foundation
 protocol JsonRetrievingUsingAlamofireDelegate {
     func getMovies();
+    func sendMoviesToPresenter(movieList:[Movie]);
 }

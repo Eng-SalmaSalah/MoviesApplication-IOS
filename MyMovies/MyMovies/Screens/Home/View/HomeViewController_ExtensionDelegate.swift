@@ -7,16 +7,21 @@
 //
 
 import Foundation
-extension HomeViewController : HomeDelegate{
+extension HomeViewController : HomeViewDelegate{
+
     
-    func setMovieList(movieList: [Movie]) {
+    func getMovieList(moviesOrder : String) {
+    homePresenter.getJsonResponseFromNetwork()
+    
+        
+    }
+    func showMovies(movieList: [Movie]) {
         self.movieList=movieList
         DispatchQueue.main.async {
             self.movieCollectionViewOutlet.reloadData()
         }
-        
-        //print(self.movieList)
     }
+    
     
     
     

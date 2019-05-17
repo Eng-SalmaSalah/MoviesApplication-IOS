@@ -10,6 +10,8 @@ import UIKit
 import SDWebImage
 
 class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
+    var movieList = [Movie]()
+    var homePresenter:HomePresenter = HomePresenter()
     
     @IBAction func segmentView(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -18,23 +20,20 @@ class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectio
         case 1:
             print("2")
         default:
-            print("3")
+            print("")
         }
     }
     
     @IBOutlet weak var movieCollectionViewOutlet: UICollectionView!
     
-    var movieList = [Movie]()
     
-
-    var homePresenter:HomePresenter = HomePresenter()
     override func viewDidLoad() {
         super.viewDidLoad()
         movieCollectionViewOutlet.delegate=self
         movieCollectionViewOutlet.dataSource=self
         // Do any additional setup after loading the view.
         homePresenter.setDelegate(homeDelegate: self)
-        homePresenter.getJsonResponse()
+        getMovieList(moviesOrder: "mostPopular")
         //print (movieList)
     }
     
@@ -60,7 +59,4 @@ class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectio
         cell.MovieImage.sd_setImage(with: URL(string:imageURL ), placeholderImage: UIImage(named: "placeholder.png"))
         return cell
     }
-   
-    
-
 }

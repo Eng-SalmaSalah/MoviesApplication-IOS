@@ -7,6 +7,7 @@
 //
 
 import Foundation
-protocol HomeDelegate {
-    func setMovieList(movieList:[Movie]) 
+protocol HomeViewDelegate {
+    func getMovieList(moviesOrder : String)
+    func showMovies(movieList:[Movie])
 }
