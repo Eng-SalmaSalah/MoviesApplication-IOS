@@ -7,13 +7,15 @@
 //
 
 import Foundation
+import Alamofire
 extension HomeViewController : HomeViewDelegate{
-
+    func checkInternetConnection() -> Bool {
+        return NetworkReachabilityManager()!.isReachable
+    }
     
     func getMovieList(mostPopular : Bool) {
-        homePresenter.getJsonResponseFromNetwork(mostPopular:mostPopular)
+    homePresenter.getJsonResponseFromNetwork(mostPopular:mostPopular)
     
-        
     }
     func showMovies(movieList: [Movie]) {
         self.movieList=movieList
