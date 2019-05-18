@@ -74,4 +74,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectio
         cell.MovieImage.sd_setImage(with: URL(string:imageURL ), placeholderImage: UIImage(named: "placeholder.png"))
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      //  MovieDetailsViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let controller:MovieDetailsViewController = storyboard.instantiateViewController(withIdentifier: "MovieDetails") as! MovieDetailsViewController
+      
+       controller.selectedMovie=movieList[indexPath.row]
+       self.navigationController?.pushViewController(controller, animated: false)
+    }
 }
