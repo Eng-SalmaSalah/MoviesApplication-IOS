@@ -17,7 +17,8 @@ class MovieDetailsViewController: UIViewController {
     
     @IBOutlet weak var MoviePosterImage: UIImageView!
     
-    @IBOutlet weak var MovieOverviewTextview: UITextView!
+   
+    @IBOutlet weak var MovieOverviewLabel: UILabel!
     
     @IBOutlet weak var MovieReleaseDateLabel: UILabel!
     
@@ -33,7 +34,7 @@ class MovieDetailsViewController: UIViewController {
         let voteAverage = selectedMovie.voteAverage
         MovieVoteAverageLabel.text=String(voteAverage)
         MovieReleaseDateLabel.text=selectedMovie.releaseDate
-        MovieOverviewTextview.text=selectedMovie.overview
+        MovieOverviewLabel.text=selectedMovie.overview
         let imageURL = "https://image.tmdb.org/t/p/w185"+selectedMovie.posterPath
         
         MoviePosterImage.sd_setImage(with: URL(string:imageURL ), placeholderImage: UIImage(named: "placeholder.png"))
