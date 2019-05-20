@@ -112,6 +112,8 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
     
     func sendReviewsToPresenter(reviewsList:[String]) {
         DetailsPresenter?.sendReviewsToView(ReviewsList: reviewsList)
+        
+    }
     func showAlert(){
         homePresenter?.showAlert()
     }
