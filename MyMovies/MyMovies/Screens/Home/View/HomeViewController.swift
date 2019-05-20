@@ -12,7 +12,6 @@ import SDWebImage
 class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     var movieList = [Movie]()
     var homePresenter:HomePresenter = HomePresenter()
-    var connectedToInternet : Bool?
     
     @IBAction func segmentView(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -20,12 +19,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectio
             movieList.removeAll()
             movieCollectionViewOutlet.reloadData()
             getMovieList(mostPopular: true)
-
         case 1:
             movieList.removeAll()
             movieCollectionViewOutlet.reloadData()
             getMovieList(mostPopular: false)
-
         default:
             getMovieList(mostPopular: true)
             
@@ -39,17 +36,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectio
         super.viewDidLoad()
         movieCollectionViewOutlet.delegate=self
         movieCollectionViewOutlet.dataSource=self
-        // Do any additional setup after loading the view.
-        connectedToInternet=checkInternetConnection()
-        if connectedToInternet!{
-            print("connected")
-        }
-        else{
-            print("not connected")
-        }
         homePresenter.setDelegate(homeDelegate: self)
+        // Do any additional setup after loading the view.
         getMovieList(mostPopular: true)
-        //print (movieList)
     }
     
     override func didReceiveMemoryWarning() {

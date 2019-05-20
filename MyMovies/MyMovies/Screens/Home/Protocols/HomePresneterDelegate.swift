@@ -10,4 +10,5 @@ import Foundation
 protocol HomePresenterDelegate{
     func getJsonResponseFromNetwork(mostPopular:Bool)
     func sendMoviesToView (movieList:[Movie])
+    
 }

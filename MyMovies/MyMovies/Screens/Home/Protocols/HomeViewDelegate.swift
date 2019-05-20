@@ -10,5 +10,4 @@ import Foundation
 protocol HomeViewDelegate {
     func getMovieList(mostPopular : Bool)
     func showMovies(movieList:[Movie])
-    func checkInternetConnection () -> Bool
 }

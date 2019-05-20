@@ -9,10 +9,7 @@
 import Foundation
 import Alamofire
 extension HomeViewController : HomeViewDelegate{
-    func checkInternetConnection() -> Bool {
-        return NetworkReachabilityManager()!.isReachable
-    }
-    
+
     func getMovieList(mostPopular : Bool) {
     homePresenter.getJsonResponseFromNetwork(mostPopular:mostPopular)
     
@@ -22,6 +19,8 @@ extension HomeViewController : HomeViewDelegate{
         DispatchQueue.main.async {
             self.movieCollectionViewOutlet.reloadData()
         }
+
     }
+
     
 }
