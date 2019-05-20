@@ -23,12 +23,8 @@ extension HomeViewController : HomeViewDelegate{
 
     }
     func showNoInternetConnectionAlert() {
-        let alert = UIAlertController(title: "No Internet Connection", message: "Please Check Your Internet Connection",preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { _ in
-            alert.dismiss(animated: true, completion: nil)
-        }))
-        
+        let alert = UIAlertController(title: "No Internet Connection", message: "Please Check Your Internet Connection",preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:nil))
         self.present(alert, animated: true, completion: nil)
     }
 
