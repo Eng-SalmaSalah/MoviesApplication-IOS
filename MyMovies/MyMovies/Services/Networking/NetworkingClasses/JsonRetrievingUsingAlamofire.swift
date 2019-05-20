@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
-
+   
     var movieList = [Movie]()
     var homePresenter : HomePresenter
     

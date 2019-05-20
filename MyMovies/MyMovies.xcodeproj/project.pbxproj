@@ -17,6 +17,8 @@
 		380931362289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380931352289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift */; };
 		382DD38D228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382DD38C228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift */; };
 		382DD391228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382DD390228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift */; };
+		3853ADCE22918B49009C8736 /* CoreDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853ADCD22918B49009C8736 /* CoreDataAccess.swift */; };
+		3853ADD222918BBA009C8736 /* CoreDataAccessDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853ADD122918BBA009C8736 /* CoreDataAccessDelegate.swift */; };
 		385813CB2289B63800E06AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385813CA2289B63800E06AAE /* AppDelegate.swift */; };
 		385813D02289B63800E06AAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385813CE2289B63800E06AAE /* Main.storyboard */; };
 		385813D32289B63800E06AAE /* MyMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 385813D12289B63800E06AAE /* MyMovies.xcdatamodeld */; };
@@ -41,6 +43,8 @@
 		380931352289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController_ExtensionDelegate.swift; sourceTree = "<group>"; };
 		382DD38C228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRetrievingUsingAlamofire.swift; sourceTree = "<group>"; };
 		382DD390228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRetrievingUsingAlamofireDelegate.swift; sourceTree = "<group>"; };
+		3853ADCD22918B49009C8736 /* CoreDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAccess.swift; sourceTree = "<group>"; };
+		3853ADD122918BBA009C8736 /* CoreDataAccessDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAccessDelegate.swift; sourceTree = "<group>"; };
 		385813C72289B63800E06AAE /* MyMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385813CA2289B63800E06AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		385813CF2289B63800E06AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +95,22 @@
 				382DD38C228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift */,
 			);
 			path = NetworkingClasses;
+			sourceTree = "<group>";
+		};
+		3853ADCF22918B5E009C8736 /* CoreDataAccessClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3853ADCD22918B49009C8736 /* CoreDataAccess.swift */,
+			);
+			path = CoreDataAccessClasses;
+			sourceTree = "<group>";
+		};
+		3853ADD022918B84009C8736 /* CoreDataAccessProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				3853ADD122918BBA009C8736 /* CoreDataAccessDelegate.swift */,
+			);
+			path = CoreDataAccessProtocols;
 			sourceTree = "<group>";
 		};
 		385813BE2289B63700E06AAE = {
@@ -238,6 +258,8 @@
 		385813ED2289B80800E06AAE /* CoreDataAccess */ = {
 			isa = PBXGroup;
 			children = (
+				3853ADD022918B84009C8736 /* CoreDataAccessProtocols */,
+				3853ADCF22918B5E009C8736 /* CoreDataAccessClasses */,
 			);
 			path = CoreDataAccess;
 			sourceTree = "<group>";
@@ -369,8 +391,10 @@
 			files = (
 				3809312C2289DF9500BE5695 /* MovieDetailsDelegate.swift in Sources */,
 				385813D32289B63800E06AAE /* MyMovies.xcdatamodeld in Sources */,
+				3853ADD222918BBA009C8736 /* CoreDataAccessDelegate.swift in Sources */,
 				380931222289DE8F00BE5695 /* HomeViewDelegate.swift in Sources */,
 				380931282289DF3000BE5695 /* HomeViewController_ExtensionDelegate.swift in Sources */,
+				3853ADCE22918B49009C8736 /* CoreDataAccess.swift in Sources */,
 				380931342289E0F900BE5695 /* MovieDetailsViewController.swift in Sources */,
 				380931362289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift in Sources */,
 				385813E12289B71600E06AAE /* Movie.swift in Sources */,
