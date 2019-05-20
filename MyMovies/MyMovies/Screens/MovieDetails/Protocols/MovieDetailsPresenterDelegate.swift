@@ -11,6 +11,8 @@ import Foundation
 protocol MovieDetailsPresenterDelegate {
     
     func getJsonResponseFromNetwork(movieID:String)
+    func getJsonResponseFromNetworkReview(movieID: String) 
     func sendTrailersToView(TrailerList: [Trailer])
+    func sendReviewsToView(ReviewsList: [String])
 
 }

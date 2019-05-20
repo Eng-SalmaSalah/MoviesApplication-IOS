@@ -11,4 +11,5 @@ import Foundation
 protocol MovieDetailsViewDelegate {
     
     func showMovieTrailers(trailerList: [Trailer])
+    func showMovieReviews(reviewList: [String])
 }

@@ -9,10 +9,12 @@
 import UIKit
 import SDWebImage
 
-class MovieDetailsViewController: UIViewController {
+class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITableViewDataSource {
     
     var selectedMovie:Movie!
     
+    @IBOutlet weak var reviewsTableview: UITableView!
+    @IBOutlet weak var trailersTableview: UITableView!
     @IBOutlet weak var MovieNameLabel: UILabel!
     
     @IBOutlet weak var MoviePosterImage: UIImageView!
@@ -26,6 +28,7 @@ class MovieDetailsViewController: UIViewController {
     
     var MoviePresenter:MovieDetailsPresenter=MovieDetailsPresenter()
     var TrailerList=[Trailer]()
+     var ReviewList=[String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,7 @@ class MovieDetailsViewController: UIViewController {
         let imageURL = "https://image.tmdb.org/t/p/w185"+selectedMovie.posterPath
         MoviePosterImage.sd_setImage(with: URL(string:imageURL ), placeholderImage: UIImage(named: "placeholder.png"))
         getMovieList(MovieId: String(selectedMovie.id))   //get Trailers using MovieId
+        getReviewList(MovieId: String(selectedMovie.id))
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +55,33 @@ class MovieDetailsViewController: UIViewController {
     
     @IBAction func FavouriteBtn(_ sender: UIButton) {
         print("Favourite")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       if(tableView==trailersTableview){
+         return TrailerList.count
+       }
+       else{
+            return ReviewList.count
+        
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell :UITableViewCell?
+        if(tableView==trailersTableview){
+            cell=trailersTableview.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! UITableViewCell
+            (cell as! MovieTableViewCell).trailerNameLabel.text=TrailerList[indexPath.row].name
+        }else if tableView==reviewsTableview
+        {
+            cell=reviewsTableview.dequeueReusableCell(withIdentifier:"cell", for: indexPath)
+            cell?.textLabel?.text=ReviewList[indexPath.row]
+        }
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
     
     /*

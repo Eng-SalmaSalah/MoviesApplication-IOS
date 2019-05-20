@@ -13,6 +13,7 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
 
     var movieList = [Movie]()
     var trailerList=[Trailer]()
+    var reviewsList=[String]()
     var homePresenter : HomePresenter?
     var DetailsPresenter:MovieDetailsPresenter?
     
@@ -66,7 +67,6 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
             case .failure(let error):
             print(error)
             case .success(let value):
-            self.movieList.removeAll()
             let json = JSON(value)
             if let result = json["results"].array{
                 for item in result{
@@ -84,5 +84,32 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
     
     func sendTrailersToPresenter(trailerList:[Trailer]) {
         DetailsPresenter?.sendTrailersToView(TrailerList: trailerList)
+    }
+    
+    
+    func getReviews(movieId: String) {
+        var url = URL(string :"https://api.themoviedb.org/3/movie/"+movieId+"/reviews?api_key=b3bc361fb3fda11be0977ea63bbfc10f")
+        
+        Alamofire.request(url!).responseJSON { (response) in
+            switch response.result{
+            case .failure(let error):
+                print(error)
+            case .success(let value):
+                let json = JSON(value)
+                if let result = json["results"].array{
+                    for item in result{
+                        let review=item["content"].stringValue
+                        self.reviewsList.append(review)
+                    }
+                self.sendReviewsToPresenter(reviewsList: self.reviewsList)
+                }
+                else{
+                    print ("error")
+                }
+            }}
+    }
+    
+    func sendReviewsToPresenter(reviewsList:[String]) {
+        DetailsPresenter?.sendReviewsToView(ReviewsList: reviewsList)
     }
 }

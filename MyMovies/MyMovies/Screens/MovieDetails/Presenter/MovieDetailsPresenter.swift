@@ -14,6 +14,7 @@ class MovieDetailsPresenter : MovieDetailsPresenterDelegate{
     
     
     var trailerList = [Trailer]()
+    var reviewList=[String]()
     
     var jsonRetrievingUsingAlamofire : JsonRetrievingUsingAlamofireDelegate?
     
@@ -30,9 +31,20 @@ class MovieDetailsPresenter : MovieDetailsPresenterDelegate{
     func getJsonResponseFromNetwork(movieID: String) {
         jsonRetrievingUsingAlamofire!.getTrailer(movieId: movieID)
         
+        
     }
+    func getJsonResponseFromNetworkReview(movieID: String) {
+        jsonRetrievingUsingAlamofire!.getReviews(movieId: movieID)
+        
+    }
+    
     
     func sendTrailersToView(TrailerList: [Trailer]){
       MovieDetailsDelegate?.showMovieTrailers(trailerList: TrailerList)
+    }
+    
+    
+    func sendReviewsToView(ReviewsList: [String]){
+        MovieDetailsDelegate?.showMovieReviews(reviewList: ReviewsList)
     }
 }
