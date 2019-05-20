@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 extension HomeViewController : HomeViewDelegate{
 
+
     func getMovieList(mostPopular : Bool) {
     homePresenter.getJsonResponseFromNetwork(mostPopular:mostPopular)
     
@@ -21,6 +22,10 @@ extension HomeViewController : HomeViewDelegate{
         }
 
     }
+    func showNoInternetConnectionAlert() {
+        let alert = UIAlertController(title: "No Internet Connection", message: "Please Check Your Internet Connection",preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
-    
 }

@@ -37,7 +37,7 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
         Alamofire.request(url!).responseJSON { (response) in
             switch response.result{
             case .failure(let error):
-                print(error)
+                self.showAlert()
             case .success(let value):
                 self.movieList.removeAll()
                 let json = JSON(value)
@@ -85,6 +85,7 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
     func sendTrailersToPresenter(trailerList:[Trailer]) {
         DetailsPresenter?.sendTrailersToView(TrailerList: trailerList)
     }
+
     
     
     func getReviews(movieId: String) {
@@ -111,5 +112,7 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
     
     func sendReviewsToPresenter(reviewsList:[String]) {
         DetailsPresenter?.sendReviewsToView(ReviewsList: reviewsList)
+    func showAlert(){
+        homePresenter?.showAlert()
     }
 }

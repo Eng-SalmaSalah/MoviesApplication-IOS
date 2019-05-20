@@ -14,4 +14,5 @@ protocol JsonRetrievingUsingAlamofireDelegate {
     func sendTrailersToPresenter(trailerList:[Trailer])
     func getReviews(movieId: String)
     func sendReviewsToPresenter(reviewsList:[String])
+    func showAlert()
 }

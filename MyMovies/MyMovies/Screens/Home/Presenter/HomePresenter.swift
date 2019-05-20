@@ -37,7 +37,9 @@ class HomePresenter:HomePresenterDelegate {
         homeDelegate?.showMovies(movieList: movieList)
     }
     
- 
+    func showAlert(){
+        homeDelegate?.showNoInternetConnectionAlert()
+    }
 }
 
 
