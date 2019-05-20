@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+extension MovieDetailsViewController : MovieDetailsViewDelegate{
+    func showMovieTrailers(trailerList: [Trailer]) {
+        self.TrailerList=trailerList
+        DispatchQueue.main.async {
+          //  self.movieCollectionViewOutlet.reloadData()
+        }
+        print(self.TrailerList)  //to ensure that
+    }
+    func getMovieList(MovieId : String) {
+        MoviePresenter.getJsonResponseFromNetwork(movieID: MovieId)
+    }
+    
+}

@@ -10,13 +10,18 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
-
+    
     var movieList = [Movie]()
-    var homePresenter : HomePresenter
+    var trailerList=[Trailer]()
+    var homePresenter : HomePresenter?
+    var DetailsPresenter:MovieDetailsPresenter?
     
     
     init(homePresneter:HomePresenter){
         self.homePresenter = homePresneter
+    }
+    init(DetailsPresenter:MovieDetailsPresenter){
+        self.DetailsPresenter = DetailsPresenter
     }
     
     func getMovies(mostPopular:Bool){
@@ -49,7 +54,35 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
         }
     }
     func sendMoviesToPresenter(movieList:[Movie]) {
-        homePresenter.sendMoviesToView(movieList: movieList)
+        homePresenter?.sendMoviesToView(movieList: movieList)
     }
     
+    
+    func getTrailer(movieId: String) {
+       var url = URL(string :"https://api.themoviedb.org/3/movie/"+movieId+"/videos?api_key=b3bc361fb3fda11be0977ea63bbfc10f")
+    
+        Alamofire.request(url!).responseJSON { (response) in
+        switch response.result{
+            case .failure(let error):
+            print(error)
+            case .success(let value):
+            self.movieList.removeAll()
+            let json = JSON(value)
+            if let result = json["results"].array{
+                for item in result{
+                    let trailer=Trailer(id: item["id"].stringValue, name: item["name"].stringValue)
+                    
+                    self.trailerList.append(trailer)
+                }
+                self.sendTrailersToPresenter(trailerList: self.trailerList)
+            }
+            else{
+                print ("error")
+            }
+        }}
+    }
+    
+    func sendTrailersToPresenter(trailerList:[Trailer]) {
+        DetailsPresenter?.sendTrailersToView(TrailerList: trailerList)
+    }
 }

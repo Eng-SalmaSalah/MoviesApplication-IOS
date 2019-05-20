@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol MovieDetailsPresenterDelegate {
+    
+    func getJsonResponseFromNetwork(movieID:String)
+    func sendTrailersToView(TrailerList: [Trailer])
+
+}

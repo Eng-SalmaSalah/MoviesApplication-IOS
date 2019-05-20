@@ -24,7 +24,8 @@ class MovieDetailsViewController: UIViewController {
     
     @IBOutlet weak var MovieVoteAverageLabel: UILabel!
     
-    
+    var MoviePresenter:MovieDetailsPresenter=MovieDetailsPresenter()
+    var TrailerList=[Trailer]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +36,12 @@ class MovieDetailsViewController: UIViewController {
         MovieVoteAverageLabel.text=String(voteAverage)
         MovieReleaseDateLabel.text=selectedMovie.releaseDate
         MovieOverviewLabel.text=selectedMovie.overview
-        let imageURL = "https://image.tmdb.org/t/p/w185"+selectedMovie.posterPath
         
+        MoviePresenter.setDelegate(MovieDetailsDelegate: self)
+        
+        let imageURL = "https://image.tmdb.org/t/p/w185"+selectedMovie.posterPath
         MoviePosterImage.sd_setImage(with: URL(string:imageURL ), placeholderImage: UIImage(named: "placeholder.png"))
+        getMovieList(MovieId: String(selectedMovie.id))   //get Trailers using MovieId
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +50,7 @@ class MovieDetailsViewController: UIViewController {
     }
     
     @IBAction func FavouriteBtn(_ sender: UIButton) {
+        print("Favourite")
     }
     
     /*

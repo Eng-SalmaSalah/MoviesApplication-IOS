@@ -9,6 +9,30 @@
 import Foundation
 
 
-class MovieDetailsPresenter{
-    //aya
+class MovieDetailsPresenter : MovieDetailsPresenterDelegate{
+    
+    
+    
+    var trailerList = [Trailer]()
+    
+    var jsonRetrievingUsingAlamofire : JsonRetrievingUsingAlamofireDelegate?
+    
+    init(){
+        self.jsonRetrievingUsingAlamofire = JsonRetrievingUsingAlamofire(DetailsPresenter: self)
+    }
+    
+    var MovieDetailsDelegate:MovieDetailsViewDelegate?
+
+    func setDelegate(MovieDetailsDelegate:MovieDetailsViewDelegate){
+        self.MovieDetailsDelegate=MovieDetailsDelegate
+    }
+    
+    func getJsonResponseFromNetwork(movieID: String) {
+        jsonRetrievingUsingAlamofire!.getTrailer(movieId: movieID)
+        
+    }
+    
+    func sendTrailersToView(TrailerList: [Trailer]){
+      MovieDetailsDelegate?.showMovieTrailers(trailerList: TrailerList)
+    }
 }
