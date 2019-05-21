@@ -72,7 +72,7 @@ moviePresenterDelegate.getJsonResponseFromNetworkReview(movieID:MovieId)
         moviePresenterDelegate.checkIfFavourite(movie: movie)
     }
     func setMovieAsFavouriteOrNot(favourite: Bool) {
-        selectedAsFavourite = true
+        selectedAsFavourite = favourite
     }
     
 }

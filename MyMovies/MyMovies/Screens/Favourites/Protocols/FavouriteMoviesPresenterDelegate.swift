@@ -10,5 +10,5 @@ import Foundation
 protocol FavouriteMoviesPresenterDelegate {
     func setDelegate(favouriteMoviesViewDelegate : FavouriteMoviesViewDelegate)
     func getMoviesFromCoreData()
-    func sendMoviesToView(movieList: [Movie]) 
+    func sendMoviesToView(movieList: [Movie])
 }

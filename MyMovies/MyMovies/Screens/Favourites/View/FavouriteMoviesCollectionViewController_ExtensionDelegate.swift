@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension FavouriteMoviesCollectionViewController : FavouriteMoviesViewDelegate,UICollectionViewDelegateFlowLayout{
+  
    
     func getFavouriteMoviesFromCoreData() {
         favouriteMoviesPresenterDelegate.getMoviesFromCoreData()
@@ -22,6 +23,13 @@ extension FavouriteMoviesCollectionViewController : FavouriteMoviesViewDelegate,
         }
         
     }
+    
+    func reloadDataAfterDeletion() {
+        DispatchQueue.main.async {
+            self.collectionView?.reloadData()
+        }
+    }
+    
     
     //set cell size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
