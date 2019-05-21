@@ -15,6 +15,9 @@
 		380931322289E07100BE5695 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380931312289E07100BE5695 /* HomeViewController.swift */; };
 		380931342289E0F900BE5695 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380931332289E0F900BE5695 /* MovieDetailsViewController.swift */; };
 		380931362289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380931352289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift */; };
+		382DB5A622938A600078BFEB /* namelog.png in Resources */ = {isa = PBXBuildFile; fileRef = 382DB5A422938A5C0078BFEB /* namelog.png */; };
+		382DB5A722938A600078BFEB /* moviesLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 382DB5A522938A5E0078BFEB /* moviesLogo.png */; };
+		382DB5A922938A830078BFEB /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382DB5A822938A830078BFEB /* LaunchScreenViewController.swift */; };
 		382DD38D228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382DD38C228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift */; };
 		382DD391228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382DD390228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift */; };
 		3853ADCE22918B49009C8736 /* CoreDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3853ADCD22918B49009C8736 /* CoreDataAccess.swift */; };
@@ -44,6 +47,9 @@
 		380931312289E07100BE5695 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		380931332289E0F900BE5695 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		380931352289E2C300BE5695 /* MovieDetailsViewController_ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController_ExtensionDelegate.swift; sourceTree = "<group>"; };
+		382DB5A422938A5C0078BFEB /* namelog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = namelog.png; sourceTree = "<group>"; };
+		382DB5A522938A5E0078BFEB /* moviesLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moviesLogo.png; sourceTree = "<group>"; };
+		382DB5A822938A830078BFEB /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		382DD38C228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRetrievingUsingAlamofire.swift; sourceTree = "<group>"; };
 		382DD390228DC4A200CC4C82 /* JsonRetrievingUsingAlamofireDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRetrievingUsingAlamofireDelegate.swift; sourceTree = "<group>"; };
 		3853ADCD22918B49009C8736 /* CoreDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAccess.swift; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 				385813D42289B64800E06AAE /* Assets.xcassets */,
 				385813D62289B64800E06AAE /* LaunchScreen.storyboard */,
 				38E65762228B244B005A1366 /* iconForHome.png */,
+				382DB5A522938A5E0078BFEB /* moviesLogo.png */,
+				382DB5A822938A830078BFEB /* LaunchScreenViewController.swift */,
+				382DB5A422938A5C0078BFEB /* namelog.png */,
 				385813D92289B64800E06AAE /* Info.plist */,
 				385813D12289B63800E06AAE /* MyMovies.xcdatamodeld */,
 			);
@@ -342,8 +351,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				385813D82289B64800E06AAE /* LaunchScreen.storyboard in Resources */,
+				382DB5A722938A600078BFEB /* moviesLogo.png in Resources */,
 				38E65763228B244B005A1366 /* iconForHome.png in Resources */,
 				385813D52289B64800E06AAE /* Assets.xcassets in Resources */,
+				382DB5A622938A600078BFEB /* namelog.png in Resources */,
 				385813D02289B63800E06AAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +422,7 @@
 				438AC6082292D00400D40BBD /* MovieTableViewCell.swift in Sources */,
 				380931322289E07100BE5695 /* HomeViewController.swift in Sources */,
 				3809312A2289DF7F00BE5695 /* MovieDetailsPresenter.swift in Sources */,
+				382DB5A922938A830078BFEB /* LaunchScreenViewController.swift in Sources */,
 				38719F17228ECF5D0071DF2F /* HomePresneterDelegate.swift in Sources */,
 				380931242289DEA400BE5695 /* HomePresenter.swift in Sources */,
 				382DD38D228DC31B00CC4C82 /* JsonRetrievingUsingAlamofire.swift in Sources */,

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dSu-2j-qNV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ScN-Nx-aIH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -72,7 +73,7 @@
                                     <segment title="Most Popular"/>
                                     <segment title="Highest Rated"/>
                                 </segments>
-                                <color key="tintColor" red="0.94698554277420044" green="0.98465365171432495" blue="0.0042463503777980804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.93725490196078431" green="0.75686274509803919" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="segmentView:" destination="oYk-ac-h0l" eventType="valueChanged" id="NV4-1B-SuW"/>
                                 </connections>
@@ -336,12 +337,68 @@
             </objects>
             <point key="canvasLocation" x="589.60000000000002" y="-424.13793103448279"/>
         </scene>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="bew-FI-acq">
+            <objects>
+                <viewController id="ScN-Nx-aIH" customClass="LaunchScreenViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ay2-AZ-f7s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moviesLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="zQh-fN-SqS">
+                                <rect key="frame" x="124" y="224" width="127" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="0eG-2y-Gge"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="523-hu-IKA">
+                                <rect key="frame" x="97" y="377" width="181" height="3"/>
+                                <color key="tintColor" red="0.94445031879999997" green="0.76896846289999998" blue="0.062538228929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="kgA-eh-9U6"/>
+                                </constraints>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="namelog.png" translatesAutoresizingMaskIntoConstraints="NO" id="uU9-lk-W9M">
+                                <rect key="frame" x="97" y="322" width="181" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d2W-cQ-oMc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zQh-fN-SqS" firstAttribute="top" secondItem="46P-yV-eqd" secondAttribute="top" constant="204" id="1yD-zS-76T"/>
+                            <constraint firstItem="46P-yV-eqd" firstAttribute="trailing" secondItem="uU9-lk-W9M" secondAttribute="trailing" constant="97" id="2ip-XI-TdH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="523-hu-IKA" secondAttribute="trailing" constant="81" id="OtY-yU-D74"/>
+                            <constraint firstItem="523-hu-IKA" firstAttribute="top" secondItem="uU9-lk-W9M" secondAttribute="bottom" constant="15" id="S5R-lo-vbX"/>
+                            <constraint firstItem="523-hu-IKA" firstAttribute="leading" secondItem="Ay2-AZ-f7s" secondAttribute="leadingMargin" constant="81" id="Woj-Gl-Pma"/>
+                            <constraint firstItem="46P-yV-eqd" firstAttribute="bottom" secondItem="523-hu-IKA" secondAttribute="bottom" constant="240" id="aa4-4f-5G3"/>
+                            <constraint firstItem="46P-yV-eqd" firstAttribute="trailing" secondItem="zQh-fN-SqS" secondAttribute="trailing" constant="124" id="ryu-oH-ohO"/>
+                            <constraint firstItem="zQh-fN-SqS" firstAttribute="leading" secondItem="46P-yV-eqd" secondAttribute="leading" constant="124" id="sWA-1l-vjf"/>
+                            <constraint firstItem="uU9-lk-W9M" firstAttribute="top" secondItem="zQh-fN-SqS" secondAttribute="bottom" constant="2" id="we2-Wm-Spr"/>
+                            <constraint firstItem="uU9-lk-W9M" firstAttribute="leading" secondItem="46P-yV-eqd" secondAttribute="leading" constant="97" id="zVv-jN-pEI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="46P-yV-eqd"/>
+                    </view>
+                    <connections>
+                        <outlet property="appName" destination="uU9-lk-W9M" id="qPl-mo-3vu"/>
+                        <outlet property="movieLogo" destination="zQh-fN-SqS" id="hq2-Q9-dtb"/>
+                        <outlet property="progressViewOutlet" destination="523-hu-IKA" id="RdT-Vg-Swk"/>
+                        <segue destination="dSu-2j-qNV" kind="presentation" identifier="goToHomeScreen" id="xHk-QC-xmu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ali-Ol-CUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1128.8" y="-92.203898050974516"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Favourite" width="18" height="18"/>
         <image name="Star" width="18" height="18"/>
         <image name="date" width="18" height="18"/>
         <image name="iconForHome.png" width="32" height="32"/>
+        <image name="moviesLogo.png" width="96" height="96"/>
+        <image name="namelog.png" width="340" height="72"/>
         <image name="placeHolder" width="128" height="128"/>
     </resources>
 </document>
