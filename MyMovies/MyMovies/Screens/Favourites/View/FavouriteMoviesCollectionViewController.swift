@@ -20,10 +20,9 @@ class FavouriteMoviesCollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
         favouriteMoviesPresenterDelegate.setDelegate(favouriteMoviesViewDelegate: self)
-        getFavouriteMoviesFromCoreData()
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.collectionView?.reloadData()
+        getFavouriteMoviesFromCoreData()
     }
 
     override func didReceiveMemoryWarning() {

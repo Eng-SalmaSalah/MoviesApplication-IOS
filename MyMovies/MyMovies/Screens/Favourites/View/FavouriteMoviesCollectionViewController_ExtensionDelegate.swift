@@ -18,10 +18,8 @@ extension FavouriteMoviesCollectionViewController : FavouriteMoviesViewDelegate,
     
     func showMovies(movieList: [Movie]) {
         self.movieList=movieList
-        DispatchQueue.main.async {
-            self.collectionView?.reloadData()
-        }
-        
+        self.collectionView?.reloadData()
+
     }
     
     func reloadDataAfterDeletion() {
