@@ -12,4 +12,11 @@ protocol MovieDetailsViewDelegate {
     
     func showMovieTrailers(trailerList: [Trailer])
     func showMovieReviews(reviewList: [String])
+    func addMovieToFavourites()
+    func respondToStoringInCoreDataResult(succeeded:Bool)
+    func removeMovieFromFavourites()
+    func respondToRemovingFromCoreDataResult(succeeded: Bool)
+    func showAlert (type:String)
+    func checkIfFavourite (movie : Movie)
+    func setMovieAsFavouriteOrNot(favourite:Bool)
 }

@@ -14,5 +14,11 @@ protocol MovieDetailsPresenterDelegate {
     func getJsonResponseFromNetworkReview(movieID: String) 
     func sendTrailersToView(TrailerList: [Trailer])
     func sendReviewsToView(ReviewsList: [String])
-
+    func storeMovieInCoreData (favMovie:Movie)
+    func notifyWithSavingResult(succeeded:Bool)
+    func removeMovieFromCoreData(unFavouritedMovie : Movie)
+    func notifyWithRemovingResult(succeeded:Bool)
+    func checkIfFavourite(movie : Movie)
+    func respondToIfFavouriteCheck (favourite : Bool)
+   func setDelegate(movieDetailsDelegate:MovieDetailsViewDelegate)
 }
