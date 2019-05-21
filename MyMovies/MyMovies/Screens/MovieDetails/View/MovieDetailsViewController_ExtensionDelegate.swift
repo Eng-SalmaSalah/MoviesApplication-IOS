@@ -21,7 +21,7 @@ extension MovieDetailsViewController : MovieDetailsViewDelegate{
         DispatchQueue.main.async {
             self.reviewsTableview.reloadData()
         }
-       print(self.ReviewList)  //to ensure that
+     //  print(self.ReviewList)  //to ensure that
     }
     func getMovieList(MovieId : String) {
         MoviePresenter.getJsonResponseFromNetwork(movieID: MovieId)
