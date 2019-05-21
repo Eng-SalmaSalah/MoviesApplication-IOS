@@ -11,7 +11,7 @@ import SDWebImage
 
 class HomeViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     var movieList = [Movie]()
-    var homePresenter:HomePresenter = HomePresenter()
+    var homePresenter:HomePresenterDelegate = HomePresenter()
     
     @IBAction func segmentView(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {

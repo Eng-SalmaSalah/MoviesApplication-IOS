@@ -11,4 +11,7 @@ protocol CoreDataAccessDelegate {
     func storeMovieInCoreData (favouriteMovie : Movie)
     func getMoviesFromCoreData ()
     func showMoviesFromCoreData ()
+    func removeMovieFromCoreData(unFavouritedMovie:Movie)
+    func checkIfFavourite(movie : Movie)
+  
 }

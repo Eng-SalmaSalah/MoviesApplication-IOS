@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "outline_star_rate_black_18dp.png",
+      "filename" : "Star.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "outline_star_rate_black_18dp-2.png",
       "scale" : "2x"
     },
     {

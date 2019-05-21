@@ -8,6 +8,7 @@
 
 import Foundation
 protocol HomePresenterDelegate{
+    func setDelegate(homeDelegate:HomeViewDelegate)
     func getJsonResponseFromNetwork(mostPopular:Bool)
     func sendMoviesToView (movieList:[Movie])
     func showAlert()

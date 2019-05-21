@@ -16,11 +16,11 @@ class HomePresenter:HomePresenterDelegate {
     var moviesList = [Movie]()
     
     var jsonRetrievingUsingAlamofire : JsonRetrievingUsingAlamofireDelegate?
-    var coreDataAccess : CoreDataAccessDelegate?
+
     
     init(){
         self.jsonRetrievingUsingAlamofire = JsonRetrievingUsingAlamofire(homePresneter: self)
-        self.coreDataAccess=CoreDataAccess(homePresenter:self)
+ 
     }
     
     var homeDelegate:HomeViewDelegate?
