@@ -110,12 +110,38 @@ class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITable
         {
             cell=reviewsTableview.dequeueReusableCell(withIdentifier:"cell", for: indexPath)
             cell?.textLabel?.text=ReviewList[indexPath.row]
+            cell?.textLabel?.textColor=UIColor.red
+            cell?.textLabel?.numberOfLines=80
+            
         }
         return cell!
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        if (tableView==trailersTableview){
+            return 200
+        }
+    else {
+            return 500
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         if (tableView==trailersTableview){
+        //go to youtube Trailer Link
+         let customURL = URL(string :"https://www.youtube.com/watch?v="+TrailerList[indexPath.row].id)!
+        if UIApplication.shared.canOpenURL(customURL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(customURL)
+            } else {
+                UIApplication.shared.openURL(customURL)
+            }
+           
+            }
+            //        else{  //unable to open the link
+            //            print("unable to open the link")
+            //        {
+        }
     }
     
     /*

@@ -70,7 +70,7 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
             let json = JSON(value)
             if let result = json["results"].array{
                 for item in result{
-                    let trailer=Trailer(id: item["id"].stringValue, name: item["name"].stringValue)
+                    let trailer=Trailer(id: item["key"].stringValue, name: item["name"].stringValue)
                     
                     self.trailerList.append(trailer)
                 }

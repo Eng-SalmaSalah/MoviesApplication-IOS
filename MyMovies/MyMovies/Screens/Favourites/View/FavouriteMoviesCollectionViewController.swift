@@ -68,7 +68,15 @@ class FavouriteMoviesCollectionViewController: UICollectionViewController {
     
         return cell
     }
-
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+       
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let controller:MovieDetailsViewController = storyboard.instantiateViewController(withIdentifier: "MovieDetails") as! MovieDetailsViewController
+        
+        controller.selectedMovie=movieList[indexPath.row]
+        self.navigationController?.pushViewController(controller, animated: false)
+    }
     // MARK: UICollectionViewDelegate
 
     /*
