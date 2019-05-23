@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Favourite Movies Collection View Controller-->
+        <!--Favourites-->
         <scene sceneID="6wI-rH-YaP">
             <objects>
                 <collectionViewController id="Cs5-oq-vW2" customClass="FavouriteMoviesCollectionViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,13 +55,13 @@
                             <outlet property="delegate" destination="Cs5-oq-vW2" id="gaW-OB-o8l"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="aFn-LL-cHh"/>
+                    <navigationItem key="navigationItem" title="Favourites" id="aFn-LL-cHh"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJu-Oa-nE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1528.8" y="286.50674662668666"/>
         </scene>
-        <!--Home View Controller-->
+        <!--My Movies-->
         <scene sceneID="uc8-W0-paC">
             <objects>
                 <viewController id="oYk-ac-h0l" customClass="HomeViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
@@ -128,7 +128,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rn3-PG-il2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JGT-9F-39F"/>
+                    <navigationItem key="navigationItem" title="My Movies" id="JGT-9F-39F"/>
                     <connections>
                         <outlet property="movieCollectionViewOutlet" destination="6s1-Wb-Jqj" id="SZ7-6r-MGC"/>
                     </connections>
