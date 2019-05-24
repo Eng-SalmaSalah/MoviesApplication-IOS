@@ -119,6 +119,7 @@ class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITable
             cell=reviewsTableview.dequeueReusableCell(withIdentifier:"cell", for: indexPath)
             cell?.textLabel?.text=ReviewList[indexPath.row]
             cell?.textLabel?.textColor=UIColor.white
+            cell?.textLabel?.font=UIFont(name: "Helvetica", size:  17)
             cell?.textLabel?.numberOfLines=0
             cell?.textLabel?.lineBreakMode = .byWordWrapping
             
