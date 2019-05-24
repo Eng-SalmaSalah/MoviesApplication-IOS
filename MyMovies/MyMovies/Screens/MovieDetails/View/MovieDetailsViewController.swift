@@ -103,8 +103,15 @@ class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell :UITableViewCell?
         if(tableView==trailersTableview){
-            cell=trailersTableview.dequeueReusableCell(withIdentifier:"cell", for: indexPath)
+            
+            cell = trailersTableview.dequeueReusableCell(withIdentifier:"cell", for: indexPath)
+            
             (cell as! MovieTableViewCell).trailerNameLabel.text=TrailerList[indexPath.row].name
+            
+            let imageURL = "http://img.youtube.com/vi/\(TrailerList[indexPath.row].id)/maxresdefault.jpg"
+
+            (cell as! MovieTableViewCell).trailerImageView.sd_setImage(with: URL(string:imageURL ), placeholderImage: UIImage(named: "youtube.png"))
+        
         }else if tableView==reviewsTableview
         {
             cell=reviewsTableview.dequeueReusableCell(withIdentifier:"cell", for: indexPath)
@@ -118,7 +125,7 @@ class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (tableView==trailersTableview){
-            return 200
+            return UITableViewAutomaticDimension
         }
     else {
             return UITableViewAutomaticDimension
