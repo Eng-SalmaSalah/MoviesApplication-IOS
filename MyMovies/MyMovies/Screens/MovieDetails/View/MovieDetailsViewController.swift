@@ -111,13 +111,16 @@ class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITable
             let imageURL = "http://img.youtube.com/vi/\(TrailerList[indexPath.row].id)/maxresdefault.jpg"
 
             (cell as! MovieTableViewCell).trailerImageView.sd_setImage(with: URL(string:imageURL ), placeholderImage: UIImage(named: "youtube.png"))
+            
+              //(cell as! MovieTableViewCell).trailerImageView
         
         }else if tableView==reviewsTableview
         {
             cell=reviewsTableview.dequeueReusableCell(withIdentifier:"cell", for: indexPath)
             cell?.textLabel?.text=ReviewList[indexPath.row]
-            cell?.textLabel?.textColor=UIColor.red
-            cell?.textLabel?.numberOfLines=80
+            cell?.textLabel?.textColor=UIColor.white
+            cell?.textLabel?.numberOfLines=0
+            cell?.textLabel?.lineBreakMode = .byWordWrapping
             
         }
         return cell!
