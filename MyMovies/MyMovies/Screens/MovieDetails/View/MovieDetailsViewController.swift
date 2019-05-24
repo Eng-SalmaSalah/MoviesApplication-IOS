@@ -46,7 +46,6 @@ class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITable
         MovieOverviewLabel.text=selectedMovie.overview
         
         moviePresenterDelegate.setDelegate(movieDetailsDelegate: self)
-        
         let imageURL = "https://image.tmdb.org/t/p/w185"+selectedMovie.posterPath
         MoviePosterImage.sd_setImage(with: URL(string:imageURL ), placeholderImage: UIImage(named: "placeholder.png"))
         getMovieList(MovieId: String(selectedMovie.id))   //get Trailers using MovieId
@@ -122,7 +121,7 @@ class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITable
             return 200
         }
     else {
-            return 500
+            return UITableViewAutomaticDimension
         }
     }
     
