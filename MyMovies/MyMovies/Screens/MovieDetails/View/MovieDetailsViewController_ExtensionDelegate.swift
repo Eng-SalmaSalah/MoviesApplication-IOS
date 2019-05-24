@@ -10,26 +10,36 @@ import Foundation
 import UIKit
 
 extension MovieDetailsViewController : MovieDetailsViewDelegate{
-   
+    
     func showMovieTrailers(trailerList: [Trailer]) {
         self.TrailerList=trailerList
-        DispatchQueue.main.async {
-          self.trailersTableview.reloadData()
+        if self.TrailerList.count != 0 {
+            DispatchQueue.main.async {
+               self.trailersTableview.reloadData()
+            }
+        }else{
+            trailersTableview.removeFromSuperview()
+            trailersLabel.removeFromSuperview()
         }
         //print(self.TrailerList)  //to ensure that
     }
     func showMovieReviews(reviewList: [String]) {
         self.ReviewList=reviewList
-        DispatchQueue.main.async {
-            self.reviewsTableview.reloadData()
+        if self.ReviewList.count != 0{
+            DispatchQueue.main.async {
+                self.reviewsTableview.reloadData()
+            }
+        }else{
+            reviewsTableview.removeFromSuperview()
+            reviewsLabel.removeFromSuperview()
         }
-       //print(self.ReviewList)  //to ensure that
+        //print(self.ReviewList)  //to ensure that
     }
     func getMovieList(MovieId : String) {
         moviePresenterDelegate.getJsonResponseFromNetwork(movieID: MovieId)
     }
     func getReviewList(MovieId:String){
-moviePresenterDelegate.getJsonResponseFromNetworkReview(movieID:MovieId)
+        moviePresenterDelegate.getJsonResponseFromNetworkReview(movieID:MovieId)
     }
     func addMovieToFavourites(){
         moviePresenterDelegate.storeMovieInCoreData(favMovie: selectedMovie)
@@ -53,7 +63,7 @@ moviePresenterDelegate.getJsonResponseFromNetworkReview(movieID:MovieId)
             removedFromFavourites=false
         }
     }
-
+    
     func showAlert (type : String) {
         var alert : UIAlertController?
         if type == "failedToStore"

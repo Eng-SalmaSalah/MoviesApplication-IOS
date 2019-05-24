@@ -34,8 +34,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="177" height="211"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1t7-xu-LIK">
-                                            <rect key="frame" x="0.0" y="0.0" width="177" height="211"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1t7-xu-LIK">
+                                            <rect key="frame" x="8" y="8" width="161" height="195"/>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -86,8 +86,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="175" height="201"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2w-if-bCJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="201"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B2w-if-bCJ">
+                                                    <rect key="frame" x="8" y="8" width="159" height="185"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -373,7 +373,9 @@
                         <outlet property="MovieReleaseDateLabel" destination="e3b-BP-W7X" id="23C-ab-6id"/>
                         <outlet property="MovieVoteAverageLabel" destination="zbg-FS-bfK" id="1bQ-K5-BmR"/>
                         <outlet property="favBtnOutlet" destination="TrR-MF-8D1" id="JSq-cS-vOc"/>
+                        <outlet property="reviewsLabel" destination="nzm-rL-MOH" id="VT8-K3-wuf"/>
                         <outlet property="reviewsTableview" destination="Hin-ab-gfm" id="yIM-Oc-IJ2"/>
+                        <outlet property="trailersLabel" destination="cMV-gK-LjE" id="f6j-km-lLu"/>
                         <outlet property="trailersTableview" destination="XWV-c1-bk9" id="b7O-A4-FcJ"/>
                     </connections>
                 </viewController>

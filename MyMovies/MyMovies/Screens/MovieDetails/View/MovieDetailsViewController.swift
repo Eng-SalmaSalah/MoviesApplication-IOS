@@ -15,6 +15,8 @@ class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITable
     var storedAsFavourite = false
     var selectedAsFavourite = false
     var removedFromFavourites = false
+    @IBOutlet weak var trailersLabel: UILabel!
+    @IBOutlet weak var reviewsLabel: UILabel!
     @IBOutlet weak var reviewsTableview: UITableView!
     @IBOutlet weak var trailersTableview: UITableView!
     @IBOutlet weak var MovieNameLabel: UILabel!
@@ -58,7 +60,10 @@ class MovieDetailsViewController: UIViewController ,UITableViewDelegate, UITable
         else{
             favBtnOutlet.setImage(#imageLiteral(resourceName: "Favourite"), for: UIControlState.normal)
         }
+
     }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -89,7 +89,7 @@ class JsonRetrievingUsingAlamofire:JsonRetrievingUsingAlamofireDelegate {
     
     
     func getReviews(movieId: String) {
-        var url = URL(string :"https://api.themoviedb.org/3/movie/"+movieId+"/reviews?api_key=b3bc361fb3fda11be0977ea63bbfc10f")
+        let url = URL(string :"https://api.themoviedb.org/3/movie/"+movieId+"/reviews?api_key=b3bc361fb3fda11be0977ea63bbfc10f")
         
         Alamofire.request(url!).responseJSON { (response) in
             switch response.result{
