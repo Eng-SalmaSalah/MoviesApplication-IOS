@@ -428,40 +428,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moviesLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zQh-fN-SqS">
-                                <rect key="frame" x="124" y="224" width="127" height="132"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="132" id="0eG-2y-Gge"/>
-                                </constraints>
-                            </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="523-hu-IKA">
-                                <rect key="frame" x="97" y="424" width="181" height="3"/>
+                                <rect key="frame" x="97" y="423" width="181" height="3"/>
                                 <color key="tintColor" red="0.94445031879999997" green="0.76896846289999998" blue="0.062538228929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="kgA-eh-9U6"/>
                                 </constraints>
                             </progressView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="namelog" translatesAutoresizingMaskIntoConstraints="NO" id="uU9-lk-W9M">
-                                <rect key="frame" x="97" y="358" width="181" height="40"/>
+                                <rect key="frame" x="97" y="361" width="181" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="d2W-cQ-oMc"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moviesLogo" translatesAutoresizingMaskIntoConstraints="NO" id="zQh-fN-SqS">
+                                <rect key="frame" x="130" y="226" width="115" height="115"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="523-hu-IKA" firstAttribute="leading" secondItem="Ay2-AZ-f7s" secondAttribute="leadingMargin" constant="81" id="0KM-Xw-o4D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="523-hu-IKA" secondAttribute="trailing" constant="81" id="DxS-y9-P0V"/>
-                            <constraint firstItem="46P-yV-eqd" firstAttribute="bottom" secondItem="523-hu-IKA" secondAttribute="bottom" constant="240" id="Mss-1x-ZvQ"/>
-                            <constraint firstItem="zQh-fN-SqS" firstAttribute="top" secondItem="46P-yV-eqd" secondAttribute="top" constant="204" id="NuO-hT-Ob7"/>
-                            <constraint firstItem="uU9-lk-W9M" firstAttribute="top" secondItem="zQh-fN-SqS" secondAttribute="bottom" constant="2" id="Q2H-Sc-dmT"/>
-                            <constraint firstItem="46P-yV-eqd" firstAttribute="trailing" secondItem="zQh-fN-SqS" secondAttribute="trailing" constant="124" id="SzW-Uw-eaO"/>
-                            <constraint firstItem="523-hu-IKA" firstAttribute="top" secondItem="uU9-lk-W9M" secondAttribute="bottom" constant="26" id="lfR-Zs-w3I"/>
-                            <constraint firstItem="zQh-fN-SqS" firstAttribute="leading" secondItem="46P-yV-eqd" secondAttribute="leading" constant="124" id="pRe-Tz-E2A"/>
-                            <constraint firstItem="46P-yV-eqd" firstAttribute="trailing" secondItem="uU9-lk-W9M" secondAttribute="trailing" constant="97" id="td2-4j-uja"/>
-                            <constraint firstItem="uU9-lk-W9M" firstAttribute="top" secondItem="zQh-fN-SqS" secondAttribute="bottom" constant="2" id="w85-I8-kma"/>
-                            <constraint firstItem="uU9-lk-W9M" firstAttribute="leading" secondItem="46P-yV-eqd" secondAttribute="leading" constant="97" id="wUf-yq-KB5"/>
-                            <constraint firstItem="523-hu-IKA" firstAttribute="top" secondItem="uU9-lk-W9M" secondAttribute="bottom" constant="26" id="x4V-gD-XIw"/>
+                            <constraint firstItem="523-hu-IKA" firstAttribute="leading" secondItem="Ay2-AZ-f7s" secondAttribute="leadingMargin" constant="81" id="8XF-vC-Xvl"/>
+                            <constraint firstItem="uU9-lk-W9M" firstAttribute="leading" secondItem="46P-yV-eqd" secondAttribute="leading" constant="97" id="CuJ-E2-exr"/>
+                            <constraint firstItem="zQh-fN-SqS" firstAttribute="leading" secondItem="46P-yV-eqd" secondAttribute="leading" constant="130" id="FIC-3u-OdU"/>
+                            <constraint firstItem="523-hu-IKA" firstAttribute="top" secondItem="uU9-lk-W9M" secondAttribute="bottom" constant="22" id="UBf-xU-b3Q"/>
+                            <constraint firstItem="zQh-fN-SqS" firstAttribute="centerX" secondItem="uU9-lk-W9M" secondAttribute="centerX" id="UVi-5U-jam"/>
+                            <constraint firstItem="uU9-lk-W9M" firstAttribute="top" secondItem="zQh-fN-SqS" secondAttribute="bottom" constant="20" id="Zdc-mG-vSr"/>
+                            <constraint firstItem="46P-yV-eqd" firstAttribute="trailing" secondItem="uU9-lk-W9M" secondAttribute="trailing" constant="97" id="a5e-Np-OHA"/>
+                            <constraint firstItem="523-hu-IKA" firstAttribute="top" secondItem="uU9-lk-W9M" secondAttribute="bottom" constant="22" id="fno-gW-BNV"/>
+                            <constraint firstItem="zQh-fN-SqS" firstAttribute="height" secondItem="Ay2-AZ-f7s" secondAttribute="height" multiplier="5:29" id="foT-Qa-OyZ"/>
+                            <constraint firstItem="46P-yV-eqd" firstAttribute="bottom" secondItem="523-hu-IKA" secondAttribute="bottom" constant="241" id="jVI-zq-Q92"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="523-hu-IKA" secondAttribute="trailing" constant="81" id="wFj-PE-2ZZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="46P-yV-eqd"/>
                     </view>
